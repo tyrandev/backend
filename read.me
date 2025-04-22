@@ -1,0 +1,16 @@
+Todaj klucz api do pliku .env żeby przetestować aplikacje
+
+node app.js
+
+curl -u admin:password123 http://localhost:3000/api/orders/details
+curl -u admin:password123 -J -O http://localhost:3000/api/orders/convert
+curl -u admin:password123 -J -O http://localhost:3000/api/order/aaaaa-1/convert
+
+curl -u admin:password123 "http://localhost:3000/api/orders/details?minWorth=100&maxWorth=500"
+curl -u admin:password123 -J -O "http://localhost:3000/api/orders/convert?minWorth=100&maxWorth=500"
+
+
+it@zooart.com.pl-115
+curl -u admin:password123 http://localhost:3000/api/order/it%40zooart.com.pl-115
+curl -u admin:password123 -J -O http://localhost:3000/api/order/it%40zooart.com.pl-115/convert
+
